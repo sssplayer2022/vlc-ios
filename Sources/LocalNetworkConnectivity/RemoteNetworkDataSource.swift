@@ -15,7 +15,7 @@ import UIKit
 enum RemoteNetworkCellType: Int {
     @available(iOS 11.0, *)
     case local
-    case cloud
+//    case cloud
     case streaming
     case download
     case wifi
@@ -68,14 +68,14 @@ class RemoteNetworkDataSource: NSObject, UITableViewDataSource, UITableViewDeleg
                 localFilesCell.accessibilityIdentifier = VLCAccessibilityIdentifier.local
                 return localFilesCell
             }
-        case .cloud:
-            if let networkCell = tableView.dequeueReusableCell(withIdentifier: RemoteNetworkCell.cellIdentifier) {
-                networkCell.textLabel?.text = cloudVC.title
-                networkCell.detailTextLabel?.text = cloudVC.detailText
-                networkCell.imageView?.image = cloudVC.cellImage
-                networkCell.accessibilityIdentifier = VLCAccessibilityIdentifier.cloud
-                return networkCell
-            }
+//        case .cloud:
+//            if let networkCell = tableView.dequeueReusableCell(withIdentifier: RemoteNetworkCell.cellIdentifier) {
+//                networkCell.textLabel?.text = cloudVC.title
+//                networkCell.detailTextLabel?.text = cloudVC.detailText
+//                networkCell.imageView?.image = cloudVC.cellImage
+//                networkCell.accessibilityIdentifier = VLCAccessibilityIdentifier.cloud
+//                return networkCell
+//            }
         case .streaming:
             if let networkCell = tableView.dequeueReusableCell(withIdentifier: RemoteNetworkCell.cellIdentifier) {
                 networkCell.textLabel?.text = streamingVC.title
@@ -128,8 +128,8 @@ class RemoteNetworkDataSource: NSObject, UITableViewDataSource, UITableViewDeleg
         switch cellType {
         case .local:
             return localVC
-        case .cloud:
-            return cloudVC
+//        case .cloud:
+//            return cloudVC
         case .streaming:
             return streamingVC
         case .download:
@@ -145,7 +145,7 @@ class RemoteNetworkDataSource: NSObject, UITableViewDataSource, UITableViewDeleg
             return UITableView.automaticDimension
         }
         switch cellType {
-        case .local, .cloud, .streaming, .download:
+        case .local, .streaming, .download:
             return 64
         case .wifi:
             return 80
