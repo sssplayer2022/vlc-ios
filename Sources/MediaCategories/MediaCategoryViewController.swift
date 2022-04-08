@@ -351,7 +351,7 @@ class MediaCategoryViewController: UICollectionViewController, UISearchBarDelega
         collectionView.collectionViewLayout.invalidateLayout()
         setupCollectionView() //Fixes crash that is caused due to layout change
         reloadData()
-        showGuideOnLaunch()
+//        showGuideOnLaunch()
         setNavbarAppearance()
         loadSort()
     }

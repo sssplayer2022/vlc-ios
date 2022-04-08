@@ -64,7 +64,7 @@
     self.accessoryView = self.serverToggle;
 
     self.imageView.image = [[UIImage imageNamed:@"WifiIcon"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    self.imageView.tintColor = [UIColor systemBlueColor];
+    self.imageView.tintColor = PresentationTheme.pj_themeColor;
     [self updateTheme];
     [self updateHTTPServerAddress];
 }
