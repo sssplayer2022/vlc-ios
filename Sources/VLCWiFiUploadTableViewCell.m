@@ -63,8 +63,8 @@
     [self.serverToggle addTarget:self action:@selector(toggleHTTPServer) forControlEvents:UIControlEventTouchUpInside];
     self.accessoryView = self.serverToggle;
 
-    self.imageView.image = [UIImage imageNamed:@"WifiIcon"];
-
+    self.imageView.image = [[UIImage imageNamed:@"WifiIcon"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    self.imageView.tintColor = [UIColor systemBlueColor];
     [self updateTheme];
     [self updateHTTPServerAddress];
 }
