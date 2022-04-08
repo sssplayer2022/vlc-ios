@@ -22,7 +22,7 @@
     _emptyLibraryLabel.text = NSLocalizedString(@"EMPTY_LIBRARY", nil);
     _emptyLibraryLongDescriptionLabel.text = NSLocalizedString(@"EMPTY_LIBRARY_LONG", nil);
     [_learnMoreButton setTitle:NSLocalizedString(@"BUTTON_LEARN_MORE", nil) forState:UIControlStateNormal];
-    
+    _learnMoreButton.hidden = YES;
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(themeDidChange)
                                                  name:kVLCThemeDidChangeNotification
