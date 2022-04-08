@@ -62,9 +62,10 @@
     self.serverToggle = [[UISwitch alloc] init];
     [self.serverToggle addTarget:self action:@selector(toggleHTTPServer) forControlEvents:UIControlEventTouchUpInside];
     self.accessoryView = self.serverToggle;
+    ColorPalette *colors = PresentationTheme.current.colors;
 
     self.imageView.image = [[UIImage imageNamed:@"WifiIcon"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    self.imageView.tintColor = PresentationTheme.pj_themeColor;
+    self.imageView.tintColor = colors.orangeUI;
     [self updateTheme];
     [self updateHTTPServerAddress];
 }
