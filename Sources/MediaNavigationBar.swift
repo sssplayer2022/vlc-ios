@@ -74,7 +74,7 @@ protocol MediaNavigationBarDelegate {
     @available(iOS 11.0, *)
     lazy var airplayRoutePickerView: AVRoutePickerView = {
         var airPlayRoutePicker = AVRoutePickerView()
-        airPlayRoutePicker.activeTintColor = .orange
+        airPlayRoutePicker.activeTintColor = PresentationTheme.current.colors.orangeUI
         airPlayRoutePicker.tintColor = .white
         return airPlayRoutePicker
     }()

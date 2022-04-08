@@ -118,7 +118,7 @@ class ActionSheetCell: UICollectionViewCell {
     
     lazy private var toggleSwitch: UISwitch = {
         let toggleSwitch = UISwitch()
-        toggleSwitch.onTintColor = .orange
+        toggleSwitch.onTintColor = PresentationTheme.current.colors.orangeUI
         toggleSwitch.translatesAutoresizingMaskIntoConstraints = false
         toggleSwitch.addTarget(self, action: #selector(switchToggled(_:)), for: .valueChanged)
         return toggleSwitch

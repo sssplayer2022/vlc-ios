@@ -43,7 +43,7 @@ class EditToolbar: UIView {
         addToPlaylistButton.titleLabel?.font = UIFont.preferredCustomFont(forTextStyle: .headline)
         addToPlaylistButton.contentHorizontalAlignment = .left
         addToPlaylistButton.addTarget(self, action: #selector(addToPlaylist), for: .touchUpInside)
-        addToPlaylistButton.tintColor = .orange
+        addToPlaylistButton.tintColor = PresentationTheme.current.colors.orangeUI
         addToPlaylistButton.accessibilityLabel = NSLocalizedString("ADD_TO_PLAYLIST", comment: "")
         addToPlaylistButton.accessibilityHint = NSLocalizedString("ADD_TO_PLAYLIST_HINT", comment: "")
         return addToPlaylistButton

@@ -609,10 +609,10 @@ class VideoPlayerViewController: UIViewController {
             videoPlayerControls.repeatButton.tintColor = .white
         case .repeatCurrentItem:
             videoPlayerControls.repeatButton.setImage(UIImage(named: "iconRepeatOne"), for: .normal)
-            videoPlayerControls.repeatButton.tintColor = .orange
+            videoPlayerControls.repeatButton.tintColor = PresentationTheme.current.colors.orangeUI
         case .repeatAllItems:
             videoPlayerControls.repeatButton.setImage(UIImage(named: "iconRepeat"), for: .normal)
-            videoPlayerControls.repeatButton.tintColor = .orange
+            videoPlayerControls.repeatButton.tintColor = PresentationTheme.current.colors.orangeUI
         @unknown default:
             assertionFailure("videoPlayerControlsDelegateRepeat: unhandled case.")
         }

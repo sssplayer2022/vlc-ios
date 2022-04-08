@@ -37,10 +37,12 @@ class EditButton {
 
     func button(_ selector: Selector) -> UIButton {
         let generatedButton = UIButton(type: .system)
+//        generatedButton.setTitleColor(PresentationTheme.current.colors.orangeUI, for: .normal)
+//        generatedButton.titleLabel?.textColor = PresentationTheme.current.colors.orangeUI
         generatedButton.setImage(UIImage(named: image), for: .normal)
         generatedButton.addTarget(self, action: selector, for: .touchUpInside)
         generatedButton.widthAnchor.constraint(equalToConstant: 44).isActive = true
-        generatedButton.tintColor = .orange
+        generatedButton.tintColor = PresentationTheme.current.colors.orangeUI
         generatedButton.accessibilityLabel = accessibilityLabel
         generatedButton.accessibilityHint = accessibilityHint
         return generatedButton
