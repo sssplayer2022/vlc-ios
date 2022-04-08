@@ -54,7 +54,7 @@ class SettingsController: UITableViewController {
         setupUI()
         setNavBarAppearance()
         registerTableViewClasses()
-        setupBarButton()
+//        setupBarButton()
         addObservers()
     }
 
@@ -138,9 +138,9 @@ class SettingsController: UITableViewController {
         if #available(iOS 10, *) {
             ImpactFeedbackGenerator().selectionChanged()
         }
-        let vc = StoreViewController(nibName: "VLCStoreViewController", bundle: nil)
-        let storeVC = UINavigationController(rootViewController: vc)
-        present(storeVC, animated: true, completion: nil)
+//        let vc = StoreViewController(nibName: "VLCStoreViewController", bundle: nil)
+//        let storeVC = UINavigationController(rootViewController: vc)
+//        present(storeVC, animated: true, completion: nil)
     }
 
     @objc private func themeDidChange() {

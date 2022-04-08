@@ -33,5 +33,5 @@
 #import "VLCPlaybackInfoSubtitlesFetcherViewController.h"
 #import "VLCDropboxConstants.h"
 #import "VLCStatusLabel.h"
-#import "VLCStoreController.h"
+//#import "VLCStoreController.h"
 #import "VLCThumbnailsCache.h"
