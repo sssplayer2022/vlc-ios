@@ -151,6 +151,8 @@
     return YES;
 }
 
+
+
 #pragma mark - Handoff
 
 - (BOOL)application:(UIApplication *)application willContinueUserActivityWithType:(NSString *)userActivityType
@@ -198,6 +200,9 @@ didFailToContinueUserActivityWithType:(NSString *)userActivityType
     return NO;
 }
 
+//- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+//    return  true;
+//}
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     //Touch ID is shown 

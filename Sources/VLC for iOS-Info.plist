@@ -216,32 +216,13 @@
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
 			<key>CFBundleURLName</key>
-			<string>VLC</string>
+			<string>SPlayer</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>vlc</string>
+				<string>splayer</string>
 			</array>
 		</dict>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Viewer</string>
-			<key>CFBundleURLName</key>
-			<string>x-callback-url</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>vlc-x-callback</string>
-			</array>
-		</dict>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Viewer</string>
-			<key>CFBundleURLName</key>
-			<string>GoogleAuth</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>com.googleusercontent.apps.CLIENT</string>
-			</array>
-		</dict>
+		<dict/>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>

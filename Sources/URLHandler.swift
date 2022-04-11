@@ -348,6 +348,8 @@ class XCallbackURLHandler: NSObject, VLCURLHandler {
 }
 
 public class VLCCallbackURLHandler: NSObject, VLCURLHandler {
+//    let preURL = "vlc"
+    let preURL = "splayer"
     public var movieURL: URL?
 
     public var subURL: URL?
@@ -359,12 +361,12 @@ public class VLCCallbackURLHandler: NSObject, VLCURLHandler {
     public var fileName: String?
 
     @objc public func canHandleOpen(url: URL, options: [UIApplication.OpenURLOptionsKey: AnyObject]) -> Bool {
-        return url.scheme == "vlc"
+        return url.scheme == preURL
     }
 
     // Safari fixes URLs like "vlc://http://example.org" to "vlc://http//example.org"
     public func transformVLCURL(_ url: URL) -> URL {
-        var parsedString = url.absoluteString.replacingOccurrences(of: "vlc://", with: "")
+        var parsedString = url.absoluteString.replacingOccurrences(of: preURL+"://", with: "")
         if let location = parsedString.range(of: "//"), parsedString[parsedString.index(location.lowerBound, offsetBy: -1)] != ":" {
             parsedString = "\(parsedString[parsedString.startIndex..<location.lowerBound])://\(parsedString[location.upperBound...])"
         } else if !parsedString.hasPrefix("http://") && !parsedString.hasPrefix("https://") && !parsedString.hasPrefix("ftp://") {
