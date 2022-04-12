@@ -3,12 +3,8 @@
         "apps": [],
         "details": [
             {
-                "appID": "TeamId.com.xxx.xxx",
-                "paths": [ "*","/wwdc/news/","/qq_conn/101577777/*"]
-            },
-            {
-                "appID": "TeamId.com.xxx.xxx",
-                "paths": [ "*","/wwdc/news/","/qq_conn/101566666/*"]
+                "appID": "UF5D4V6LLF.com.SPlayer.ios",
+                "paths": [ "*"]
             }
         ]
     }
