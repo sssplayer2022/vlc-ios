@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "icnChecked.pdf",
+      "filename" : "checkboxSelected.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "checkboxSelected@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "checkboxSelected@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
