@@ -331,6 +331,7 @@
 		9BADAF45185FBD9D00108BD8 /* VLCFrostedGlasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAF44185FBD9D00108BD8 /* VLCFrostedGlasView.m */; };
 		9BE4D1CE183D76950006346C /* VLCCloudStorageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3784B0183A990F009EE944 /* VLCCloudStorageTableViewCell.m */; };
 		A483C473E441E7BA7B31BF76 /* libPods-VLC-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6CC455148EC65B1D66CC66 /* libPods-VLC-iOS.a */; };
+		A4BD21D328054D160095ED97 /* apple-app-site-association in Resources */ = {isa = PBXBuildFile; fileRef = A4BD21D228054D160095ED97 /* apple-app-site-association */; };
 		A79246C8170F11DF0036AAF2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A79246C6170F11DF0036AAF2 /* Localizable.strings */; };
 		CAA0B0ED2072651000B9274E /* VLCTestMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF76D8F20709C4100E2AD7B /* VLCTestMenu.swift */; };
 		CAA0B0F02072651A00B9274E /* XCUIElement+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF76D9320709C9500E2AD7B /* XCUIElement+Helpers.swift */; };
@@ -945,6 +946,7 @@
 		9B9231C3185A703700F89498 /* VLCNetworkLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VLCNetworkLoginViewController.xib; path = Resources/VLCNetworkLoginViewController.xib; sourceTree = SOURCE_ROOT; };
 		9BADAF43185FBD9D00108BD8 /* VLCFrostedGlasView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VLCFrostedGlasView.h; path = Sources/VLCFrostedGlasView.h; sourceTree = SOURCE_ROOT; };
 		9BADAF44185FBD9D00108BD8 /* VLCFrostedGlasView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VLCFrostedGlasView.m; path = Sources/VLCFrostedGlasView.m; sourceTree = SOURCE_ROOT; };
+		A4BD21D228054D160095ED97 /* apple-app-site-association */ = {isa = PBXFileReference; lastKnownFileType = text; path = "apple-app-site-association"; sourceTree = "<group>"; };
 		A7035BBD174519600057DFA7 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		A79246C7170F11DF0036AAF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
 		A79246C9170F11E40036AAF2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -2220,6 +2222,7 @@
 				7D2AC5D21B67747000A8D9DD /* OneDrive (Imported) */,
 				419A2C651F37A4B70069D224 /* VLCStringsForLocalization.m */,
 				7DAF3E93268F536400C47D95 /* Launch Screen.storyboard */,
+				A4BD21D228054D160095ED97 /* apple-app-site-association */,
 			);
 			name = "iOS Resources";
 			path = Resources;
@@ -2809,6 +2812,7 @@
 				7DBBF1A4183AB4300009A339 /* VLCNetworkListCell.xib in Resources */,
 				91B85AEF2731A4C00010F137 /* StoreProductCollectionViewCell.xib in Resources */,
 				7DF04F501961F2B8004A5429 /* web-open.png in Resources */,
+				A4BD21D328054D160095ED97 /* apple-app-site-association in Resources */,
 				8D3B4C0E2226E49A00B9F652 /* AudioMiniPlayer.xib in Resources */,
 				7D5DD5C717590ABF001421E3 /* About Contents.html in Resources */,
 				7DBBF19B183AB4300009A339 /* VLCCloudStorageTableViewCell~iphone.xib in Resources */,

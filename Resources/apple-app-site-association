@@ -1,0 +1,15 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "TeamId.com.xxx.xxx",
+                "paths": [ "*","/wwdc/news/","/qq_conn/101577777/*"]
+            },
+            {
+                "appID": "TeamId.com.xxx.xxx",
+                "paths": [ "*","/wwdc/news/","/qq_conn/101566666/*"]
+            }
+        ]
+    }
+}
