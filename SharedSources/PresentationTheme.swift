@@ -108,7 +108,8 @@ enum PresentationThemeType: Int {
     static let brightTheme = PresentationTheme(colors: brightPalette)
     static let darkTheme = PresentationTheme(colors: darkPalette)
     static let blackTheme = PresentationTheme(colors: blackPalette)
-    static let pj_themeColor = UIColor.systemBlue
+//    static let pj_themeColor = UIColor.systemBlue
+    static let pj_themeColor = UIColor(red: 94/255.0, green: 92/255.0, blue: 230/255.0, alpha: 1.0)
     var isDark: Bool {
         return colors.isDark
     }
