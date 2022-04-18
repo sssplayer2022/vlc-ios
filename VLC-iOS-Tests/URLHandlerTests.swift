@@ -16,7 +16,7 @@ import XCTest
 class URLHandlerTests: XCTestCase {
 
     func testVLCHandler() {
-        let handler = VLCCallbackURLHandler()
+        let handler = MXURLHandler()
         let transformURLString = { handler.transformVLCURL(URL(string: $0)!) }
         XCTAssertEqual(transformURLString("vlc://http//test"), URL(string: "http://test")!, "strip the custom scheme and re-add the colon")
         XCTAssertEqual(transformURLString("vlc://http://test"), URL(string: "http://test")!, "just strip the custom scheme")

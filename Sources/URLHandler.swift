@@ -35,7 +35,8 @@ enum VLCXCallbackType {
 }
 
 extension VLCURLHandler {
-    func matchCallback(key: String) -> VLCXCallbackType {
+   
+    private func matchCallback(key: String) -> VLCXCallbackType {
         switch key {
         case "url":
             return .url
@@ -188,7 +189,7 @@ extension VLCURLHandler {
             DropBoxURLHandler(),
             FileURLHandler(),
             XCallbackURLHandler(),
-            VLCCallbackURLHandler(),
+            MXURLHandler(),
             ElseCallbackURLHandler()
         ]
     #else
@@ -351,7 +352,7 @@ class XCallbackURLHandler: NSObject, VLCURLHandler {
     }
 }
 
-public class VLCCallbackURLHandler: NSObject, VLCURLHandler {
+public class MXURLHandler: NSObject, VLCURLHandler {
 //    let preURL = "vlc"
     let preURL = "splayer"
     public var movieURL: URL?
@@ -372,35 +373,36 @@ public class VLCCallbackURLHandler: NSObject, VLCURLHandler {
 
     
     @objc public func canHandleOpen(url: URL, options: [UIApplication.OpenURLOptionsKey: AnyObject]) -> Bool {
-        return url.scheme == preURL
-    }
-
-    // Safari fixes URLs like "vlc://http://example.org" to "vlc://http//example.org"
-    public func transformVLCURL(_ url: URL) -> URL {
         let parsedString = url.absoluteString
         
         var array = parsedString.components(separatedBy: "?url=")
-        array.removeFirst()
+        
+        if array.count>=2 {
+            array.removeFirst()
+        } else {
+            return false
+        }
         let playUrl = array.first
         
-        let arr = playUrl?.components(separatedBy: "&action=") ?? [""]
+        guard let arr = playUrl?.components(separatedBy: "&action=") else { return false }
+        
         
         if arr.count>=2 {
             action = ActionType.init(rawValue: arr[1]) ?? .playback
+        } else {
+            return false
         }
-        return URL(string: arr.first!)!
+        guard  let urlstr = arr.first, let movie = URL(string: urlstr) else { return false }
+        movieURL = movie
+        return url.scheme == preURL
     }
 
+
     public func performOpen(url: URL, options: [UIApplication.OpenURLOptionsKey: AnyObject]) -> Bool {
-        let transformedURL = transformVLCURL(url)
-
-        movieURL = transformedURL
-
 #if os(iOS)
         if action == .playback {
             handlePlay()
         } else {
-//            self.createAlert()
             handleDownload()
         }
         
@@ -449,6 +451,11 @@ extension VLCURLHandler {
 #if os(iOS)
     func downloadMovie(from url: URL, fileNameOfMedia fileName: String?) {
         VLCDownloadController.sharedInstance().addURL(toDownloadList: url, fileNameOfMedia: fileName)
+        let vc = VLCDownloadViewController()
+        let tab_vc = UIApplication.shared.keyWindow?.rootViewController as! UITabBarController
+        tab_vc.selectedIndex = 3
+        let nav = tab_vc.viewControllers?[3] as! UINavigationController
+        nav.pushViewController(vc, animated: true)
     }
 #else
     func downloadMovie(from url: URL, fileNameOfMedia fileName: String?) {
