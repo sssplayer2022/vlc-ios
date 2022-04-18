@@ -44,6 +44,7 @@ class EditController: UIViewController {
 
     func resetSelections(resetUI: Bool) {
         for indexPath in selectedCellIndexPaths {
+            presentingView.tintColor = .blue
             presentingView.deselectItem(at: indexPath, animated: true)
             if resetUI {
                 collectionView(presentingView, didDeselectItemAt: indexPath)

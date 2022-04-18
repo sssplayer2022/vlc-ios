@@ -177,7 +177,7 @@
                     </view>
                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UTe-u3-NWI">
                         <rect key="frame" x="0.0" y="0.0" width="309" height="193"/>
-                        <color key="backgroundColor" red="0.94509803920000002" green="0.49019607840000001" blue="0.0" alpha="0.39982421875000002" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.36685228349999999" green="0.35919123889999999" blue="0.90151584149999997" alpha="0.49573086070365646" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkboxEmpty" translatesAutoresizingMaskIntoConstraints="NO" id="hBS-N5-2jA">
                         <rect key="frame" x="275" y="159" width="24" height="24"/>
