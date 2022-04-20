@@ -452,9 +452,9 @@ extension VLCURLHandler {
     func downloadMovie(from url: URL, fileNameOfMedia fileName: String?) {
         VLCDownloadController.sharedInstance().addURL(toDownloadList: url, fileNameOfMedia: fileName)
         let vc = VLCDownloadViewController()
-        let tab_vc = UIApplication.shared.keyWindow?.rootViewController as! UITabBarController
-        tab_vc.selectedIndex = 3
-        let nav = tab_vc.viewControllers?[3] as! UINavigationController
+        guard let tabvc = UIApplication.shared.keyWindow?.rootViewController as? UITabBarController else { return }
+        tabvc.selectedIndex = 3
+        let nav = tabvc.viewControllers?[3] as! UINavigationController
         nav.pushViewController(vc, animated: true)
     }
 #else
