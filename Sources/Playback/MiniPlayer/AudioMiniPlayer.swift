@@ -122,7 +122,8 @@ private extension AudioMiniPlayer {
     private func initView() {
         Bundle.main.loadNibNamed("AudioMiniPlayer", owner: self, options: nil)
         addSubview(audioMiniPlayer)
-
+        
+        progressBarView.tintColor = UIColor(0x5e5ce6)
         audioMiniPlayer.clipsToBounds = true
         audioMiniPlayer.layer.cornerRadius = 4
         audioMiniPlayer.layer.borderWidth = 0.5

@@ -63,7 +63,7 @@ class RemoteNetworkDataSource: NSObject, UITableViewDataSource, UITableViewDeleg
         case .local:
             if let localFilesCell = tableView.dequeueReusableCell(withIdentifier: ExternalMediaProviderCell.cellIdentifier) {
                 localFilesCell.textLabel?.text = NSLocalizedString("FILES_APP_CELL_TITLE", comment: "")
-                localFilesCell.detailTextLabel?.text = NSLocalizedString("FILES_APP_CELL_SUBTITLE", comment: "")
+//                localFilesCell.detailTextLabel?.text = NsysSLocalizedString("FILES_APP_CELL_SUBTITLE", comment: "")
                 localFilesCell.imageView?.image = UIImage(named: "homeLocalFiles")?.withRenderingMode(.alwaysTemplate)
                 localFilesCell.accessibilityIdentifier = VLCAccessibilityIdentifier.local
                 return localFilesCell

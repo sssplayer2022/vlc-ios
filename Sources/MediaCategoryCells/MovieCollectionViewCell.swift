@@ -86,7 +86,7 @@ class MovieCollectionViewCell: BaseCollectionViewCell {
         if #available(iOS 11.0, *) {
             thumbnailView.accessibilityIgnoresInvertColors = true
         }
-
+        progressView.tintColor = UIColor(0x5e5ce6)
         clipsToBounds = true
         layer.cornerRadius = 2
 
