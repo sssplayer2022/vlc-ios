@@ -16,19 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchCone" translatesAutoresizingMaskIntoConstraints="NO" id="Lid-6c-6Vc">
-                                <rect key="frame" x="123.5" y="361.5" width="167" height="183"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="Lid-6c-6Vc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_icon_white" translatesAutoresizingMaskIntoConstraints="NO" id="nve-vN-QHS">
+                                <rect key="frame" x="157" y="321" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Lid-6c-6Vc" secondAttribute="height" multiplier="32:35" id="3qJ-DT-gUn"/>
+                                    <constraint firstAttribute="height" constant="100" id="jrR-dK-F47"/>
+                                    <constraint firstAttribute="width" constant="100" id="qCl-9L-yqH"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Lid-6c-6Vc" firstAttribute="centerY" secondItem="Bcu-3y-fUS" secondAttribute="centerY" id="6bK-MI-OPk"/>
-                            <constraint firstItem="Lid-6c-6Vc" firstAttribute="centerX" secondItem="Bcu-3y-fUS" secondAttribute="centerX" id="HkG-kz-6sW"/>
-                            <constraint firstItem="Lid-6c-6Vc" firstAttribute="width" secondItem="Lid-6c-6Vc" secondAttribute="height" multiplier="32:35" id="aaw-JY-zJl"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" secondItem="Lid-6c-6Vc" secondAttribute="bottom" id="J5l-wW-w7t"/>
+                            <constraint firstItem="nve-vN-QHS" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="OUm-wQ-tUf"/>
+                            <constraint firstItem="Lid-6c-6Vc" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" id="dEa-k1-qIX"/>
+                            <constraint firstItem="nve-vN-QHS" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="277" id="gqH-nI-ank"/>
+                            <constraint firstItem="Lid-6c-6Vc" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="igC-7c-Ubd"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="Lid-6c-6Vc" secondAttribute="trailing" id="vdk-JG-jOU"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -38,6 +45,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LaunchCone" width="167" height="167"/>
+        <image name="app_icon_white" width="100" height="100"/>
+        <image name="rectangle" width="375" height="812"/>
     </resources>
 </document>
